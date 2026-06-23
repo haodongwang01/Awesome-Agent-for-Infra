@@ -1,11 +1,8 @@
 <div align="center">
 
-<img src="figs/agent-for-infra-teaser.svg" alt="Agent-for-Infra overview" style="width: 88%;"/>
-
 ## Awesome Agent-for-Infra
 
 [![Awesome](https://img.shields.io/badge/Awesome-0066CC?style=for-the-badge&logo=awesome-lists&logoColor=white)](https://github.com/sindresorhus/awesome)
-[![Survey](https://img.shields.io/badge/Survey-Agent--for--Infra-A42C25?style=for-the-badge&logo=readthedocs&logoColor=white)](#overview)
 [![Github](https://img.shields.io/badge/Awesome--Agent--for--Infra-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/haodongwang01/Awesome-Agent-for-Infra)
 [![License](https://img.shields.io/badge/License-MIT-FFD14D?style=for-the-badge)](LICENSE)
 
@@ -15,7 +12,6 @@
 
 ## 🎉 News
 
-- **[2026-06-23]** Restyled the README into a survey-style Awesome list with badges, an overview map, and categorized resource tables.
 - **[2026-06-18]** Released the initial four-track map for AI agents in infrastructure.
 
 ## 📖 Contents
@@ -23,7 +19,6 @@
 - [Awesome Agent-for-Infra](#awesome-agent-for-infra)
 - [🎉 News](#-news)
 - [📖 Contents](#-contents)
-- [🗺️ Overview](#overview)
 - [🧭 Survey Map](#-survey-map)
 - [📄 Resource List](#-resource-list)
   - [Hardware and Architecture Design](#hardware-and-architecture-design)
@@ -31,20 +26,6 @@
   - [Model Serving and System Optimization](#model-serving-and-system-optimization)
   - [Environments and Benchmarks](#environments-and-benchmarks)
 - [🌟 Acknowledgment](#-acknowledgment)
-- [✨ Star History](#-star-history)
-
-<a id="overview"></a>
-
-## 🗺️ Overview
-
-AI infrastructure is becoming agentic. The important systems are no longer just models that answer questions; they are agents that read specs, call compilers, run simulators, inspect profiler traces, patch code, tune deployments, and close the loop with executable evidence.
-
-We organize the survey into four infrastructure layers:
-
-1. <u>Hardware and Architecture Design:</u> agents that generate RTL, debug waveforms, run synthesis, and search architecture design spaces.
-2. <u>Operators, Kernels and Compilers:</u> agents that generate, repair, profile, and optimize kernels, tensor programs, and compiler passes.
-3. <u>Model Serving and System Optimization:</u> agents that tune serving engines, schedulers, routing, autoscaling, and deployment settings.
-4. <u>Environments and Benchmarks:</u> executable harnesses and metrics for judging whether infra agents create real improvements.
 
 ## 🧭 Survey Map
 
@@ -111,7 +92,3 @@ We organize the survey into four infrastructure layers:
 ## 🌟 Acknowledgment
 
 This survey is built from the open papers, benchmarks, and systems maintained by the AI infrastructure community. The README structure draws inspiration from [TsinghuaC3I/Awesome-RL-for-LRMs](https://github.com/TsinghuaC3I/Awesome-RL-for-LRMs).
-
-## ✨ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=haodongwang01/Awesome-Agent-for-Infra&type=Date)](https://www.star-history.com/#haodongwang01/Awesome-Agent-for-Infra&Date)

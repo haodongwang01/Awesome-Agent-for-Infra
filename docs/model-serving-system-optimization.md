@@ -21,6 +21,20 @@ Workload / SLO -> serving config -> deploy / run -> load test -> inspect traces 
 - Can it diagnose bottlenecks from traces, logs, GPU metrics, and load-test reports?
 - Can it safely change deployment settings under SLO, budget, and reliability constraints?
 
+## Paper
+
+### Serving Systems and Papers
+
+| Date | Name | Title | Paper / Docs | Code |
+|:-:|:-:|:-|:-:|:-:|
+| 2024 Mar | `Sarathi-Serve` | Chunked prefill and stall-free scheduling for throughput-latency tradeoffs | [![Paper][paper-badge]](https://arxiv.org/abs/2403.02310) | [![Code][code-badge]](https://github.com/microsoft/sarathi-serve) |
+| 2023 Dec | `SGLang` | Structured language model programs with runtime optimizations such as KV-cache reuse | [![Paper][paper-badge]](https://arxiv.org/abs/2312.07104) | [![Code][code-badge]](https://github.com/sgl-project/sglang) |
+| 2023 Oct | `TensorRT-LLM` | NVIDIA inference stack for optimized LLM deployment | [![Blog][blog-badge]](https://developer.nvidia.com/blog/optimizing-inference-on-llms-with-tensorrt-llm-now-publicly-available/) [![Docs][docs-badge]](https://nvidia.github.io/TensorRT-LLM/) | [![Code][code-badge]](https://github.com/NVIDIA/TensorRT-LLM) |
+| 2023 Sep | `vLLM` | High-throughput LLM serving with KV-cache paging and continuous batching | [![Paper][paper-badge]](https://arxiv.org/abs/2309.06180) | [![Code][code-badge]](https://github.com/vllm-project/vllm) |
+| 2020 Jul | `KServe` | Kubernetes-native model serving and inference platform | [![Paper][paper-badge]](https://arxiv.org/abs/2007.07366) [![Docs][docs-badge]](https://kserve.github.io/website/) | [![Code][code-badge]](https://github.com/kserve/kserve) |
+| - | `TGI` | Hugging Face serving stack for text generation workloads | [![Docs][docs-badge]](https://huggingface.co/docs/text-generation-inference) | [![Code][code-badge]](https://github.com/huggingface/text-generation-inference) |
+| - | `llama.cpp` | Portable inference runtime with CPU, quantization, and edge-deployment relevance | - | [![Code][code-badge]](https://github.com/ggml-org/llama.cpp) |
+
 ## Skills
 
 | Skill | What it should do |
@@ -32,35 +46,18 @@ Workload / SLO -> serving config -> deploy / run -> load test -> inspect traces 
 | `autoscaling-slo-agent` | Tune replicas, concurrency, placement, and admission control under SLOs. |
 | `trace-root-cause-agent` | Diagnose performance regressions from logs, traces, and GPU metrics. |
 
-## Paper
-
-| Paper | Why it matters |
-| --- | --- |
-| [vLLM / PagedAttention](https://arxiv.org/abs/2309.06180) | High-throughput LLM serving with KV-cache paging and continuous batching. |
-| [SGLang](https://arxiv.org/abs/2312.07104) | Structured language model programs with runtime optimizations such as KV-cache reuse. |
-| [Sarathi-Serve](https://arxiv.org/abs/2403.02310) | Chunked prefill and stall-free scheduling for throughput-latency tradeoffs. |
-
 ## Toolchain
 
-| Toolchain | Role in the agent loop |
-| --- | --- |
-| [vLLM](https://github.com/vllm-project/vllm) | Production-facing open-source serving engine for LLM and multimodal inference. |
-| [SGLang repo](https://github.com/sgl-project/sglang) | Open-source framework for efficient structured generation and serving. |
-| [Sarathi-Serve repo](https://github.com/microsoft/sarathi-serve) | Open implementation of Sarathi-style serving experiments. |
-| [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) | NVIDIA inference stack for optimized LLM deployment. |
-| [Text Generation Inference](https://github.com/huggingface/text-generation-inference) | Hugging Face serving stack for text generation workloads. |
-| [llama.cpp](https://github.com/ggml-org/llama.cpp) | Portable inference runtime with strong CPU, quantization, and edge-deployment relevance. |
-| [Triton Inference Server](https://github.com/triton-inference-server/server) | General-purpose inference server for production deployment and benchmarking. |
-| [KServe](https://github.com/kserve/kserve) | Kubernetes-native model serving and inference platform. |
-| [Ray Serve](https://github.com/ray-project/ray) | Scalable Python serving framework for distributed inference applications. |
-| [BentoML](https://github.com/bentoml/BentoML) | Model serving framework with deployment packaging and service APIs. |
+### Toolchains
 
-## Evaluation Signals
+| Date | Name | Title | Paper / Docs | Code |
+|:-:|:-:|:-|:-:|:-:|
+| - | `Triton Inference Server` | General-purpose inference server for production deployment and benchmarking | [![Docs][docs-badge]](https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/) | [![Code][code-badge]](https://github.com/triton-inference-server/server) |
+| - | `Ray Serve` | Scalable Python serving framework for distributed inference applications | [![Docs][docs-badge]](https://docs.ray.io/en/latest/serve/) | [![Code][code-badge]](https://github.com/ray-project/ray) |
+| - | `BentoML` | Model serving framework with deployment packaging and service APIs | [![Docs][docs-badge]](https://docs.bentoml.com/) | [![Code][code-badge]](https://github.com/bentoml/BentoML) |
 
-| Signal | Examples |
-| --- | --- |
-| Latency | TTFT, TPOT, p50/p95/p99 latency, deadline miss rate |
-| Throughput | Tokens/sec, requests/sec, concurrency, goodput under SLO |
-| Resource use | GPU memory, SM utilization, KV-cache usage, CPU overhead |
-| Reliability | Error rate, overload behavior, recovery time, admission-control behavior |
-| Cost | GPU-hours, dollars/request, tokens/dollar, utilization under bursty traffic |
+
+[paper-badge]: https://img.shields.io/badge/-Paper-0f766e?style=flat-square
+[docs-badge]: https://img.shields.io/badge/-Docs-475569?style=flat-square
+[blog-badge]: https://img.shields.io/badge/-Blog-b45309?style=flat-square
+[code-badge]: https://img.shields.io/badge/-Code-111827?style=flat-square&logo=github&logoColor=white

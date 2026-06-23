@@ -8,11 +8,7 @@ How should infrastructure agents be evaluated so that progress means real execut
 
 This track is the measuring layer. Infra-agent benchmarks need environments where actions have consequences: code must compile, hardware must simulate, kernels must run, servers must meet SLOs, and every claimed improvement must be reproducible.
 
-## Evaluation Loop
 
-```text
-Task -> tool sandbox -> agent action -> execution harness -> judge -> metrics -> artifacts
-```
 
 ## Key Questions
 
@@ -20,6 +16,17 @@ Task -> tool sandbox -> agent action -> execution harness -> judge -> metrics ->
 - Which metrics distinguish real progress from benchmark overfitting?
 - How should traces, logs, generated code, configs, and hardware metadata be stored?
 - How should leaderboards handle hardware differences, flaky tests, and tuning budgets?
+
+## Paper
+
+### Benchmarks
+
+| Date | Name | Title | Paper / Docs | Code |
+|:-:|:-:|:-|:-:|:-:|
+| 2025 Feb | `KernelBench` | GPU kernel generation benchmark with correctness and speed metrics | [![Paper][paper-badge]](https://arxiv.org/abs/2502.10517) | [![Code][code-badge]](https://github.com/ScalingIntelligence/KernelBench) |
+| 2023 Oct | `SWE-bench` | Repo-level execution and patch-evaluation design for software agents | [![Paper][paper-badge]](https://arxiv.org/abs/2310.06770) [![Docs][docs-badge]](https://www.swebench.com/) | [![Code][code-badge]](https://github.com/SWE-bench/SWE-bench) |
+| 2023 Sep | `VerilogEval` | HDL generation and test-driven evaluation for hardware agents | [![Paper][paper-badge]](https://arxiv.org/abs/2309.07544) | [![Code][code-badge]](https://github.com/NVlabs/verilog-eval) |
+| 2019 Nov | `MLPerf Inference` | Industry-standard inference benchmarking methodology and reference workloads | [![Paper][paper-badge]](https://arxiv.org/abs/1911.02549) | [![Code][code-badge]](https://github.com/mlcommons/inference) |
 
 ## Skills
 
@@ -32,35 +39,21 @@ Task -> tool sandbox -> agent action -> execution harness -> judge -> metrics ->
 | `leaderboard-validator` | Verify submissions under fixed hardware and software constraints. |
 | `baseline-runner` | Compare agents against scripts, search methods, and expert-written baselines. |
 
-## Paper
-
-| Paper | Why it matters |
-| --- | --- |
-| [MLPerf Inference](https://arxiv.org/abs/1911.02549) | Industry-standard inference benchmarking methodology and reference workloads. |
-| [KernelBench](https://arxiv.org/abs/2502.10517) | GPU kernel generation benchmark with correctness and speed metrics. |
-| [VerilogEval](https://github.com/NVlabs/verilog-eval) | HDL generation and test-driven evaluation for hardware agents. |
-| [SWE-bench](https://github.com/SWE-bench/SWE-bench) | Software-agent benchmark that informs repo-level execution and patch-evaluation design. |
-
 ## Toolchain
 
-| Toolchain | Role in the evaluation loop |
-| --- | --- |
-| [MLPerf Inference repo](https://github.com/mlcommons/inference) | Reference implementations and rules for reproducible inference evaluation. |
-| [MLPerf LoadGen](https://github.com/mlcommons/inference/tree/master/loadgen) | Load generation and scenario control for inference benchmarking. |
-| [LLMPerf](https://github.com/ray-project/llmperf) | LLM serving benchmark harness for latency and throughput workloads. |
-| [Triton Perf Analyzer](https://github.com/triton-inference-server/perf_analyzer) | Performance measurement tooling for inference deployments. |
-| [OpenAI Evals](https://github.com/openai/evals) | General evaluation framework useful for wrapping agent tasks and judges. |
-| [Inspect](https://github.com/UKGovernmentBEIS/inspect_ai) | Evaluation framework for agentic and tool-using model assessments. |
-| [ArchGym](https://github.com/srivatsankrishnan/oss-arch-gym) | Architecture design-space environment for closed-loop optimization agents. |
-| [VerilogEval](https://github.com/NVlabs/verilog-eval) | HDL generation and test harness for hardware agents. |
-| [KernelBench](https://arxiv.org/abs/2502.10517) | GPU kernel generation benchmark with correctness and speed metrics. |
+### Evaluation Toolchains
 
-## Benchmark Dimensions
+| Date | Name | Title | Paper / Docs | Code |
+|:-:|:-:|:-|:-:|:-:|
+| 2023 Nov | `LLMPerf` | LLM serving benchmark harness for latency and throughput workloads | [![Blog][blog-badge]](https://www.anyscale.com/blog/reproducible-performance-metrics-for-llm-inference) | [![Code][code-badge]](https://github.com/ray-project/llmperf) |
+| - | `MLPerf LoadGen` | Load generation and scenario control for inference benchmarking | [![Docs][docs-badge]](https://github.com/mlcommons/inference/tree/master/loadgen) | [![Code][code-badge]](https://github.com/mlcommons/inference/tree/master/loadgen) |
+| - | `Triton Perf Analyzer` | Performance measurement tooling for inference deployments | [![Docs][docs-badge]](https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/perf_analyzer/README.html) | [![Code][code-badge]](https://github.com/triton-inference-server/perf_analyzer) |
+| - | `OpenAI Evals` | Evaluation framework useful for wrapping agent tasks and judges | [![Docs][docs-badge]](https://developers.openai.com/cookbook/examples/evaluation/getting_started_with_openai_evals) | [![Code][code-badge]](https://github.com/openai/evals) |
+| - | `Inspect` | Evaluation framework for agentic and tool-using model assessments | [![Docs][docs-badge]](https://inspect.aisi.org.uk/) | [![Code][code-badge]](https://github.com/UKGovernmentBEIS/inspect_ai) |
+| 2023 Jun | `ArchGym` | Architecture design-space environment for closed-loop optimization agents | [![Paper][paper-badge]](https://arxiv.org/abs/2306.08888) | [![Code][code-badge]](https://github.com/srivatsankrishnan/oss-arch-gym) |
 
-| Dimension | Hardware | Kernels / compilers | Serving |
-| --- | --- | --- | --- |
-| Correctness | Testbench pass rate, formal checks | Numerical tolerance, shape coverage | API correctness, output constraints |
-| Performance | Frequency, latency, area, power | Runtime, bandwidth, occupancy | TTFT, TPOT, throughput, tail latency |
-| Cost | Tool runtime, synthesis time | Compile time, tuning budget | GPU-hours, dollars/request |
-| Robustness | Spec ambiguity, corner cases | Dtype, size, architecture shifts | Traffic bursts, long context, failures |
-| Reproducibility | Tool versions, seeds, targets | Hardware, drivers, compiler flags | Model, engine, workload trace |
+
+[paper-badge]: https://img.shields.io/badge/-Paper-0f766e?style=flat-square
+[docs-badge]: https://img.shields.io/badge/-Docs-475569?style=flat-square
+[blog-badge]: https://img.shields.io/badge/-Blog-b45309?style=flat-square
+[code-badge]: https://img.shields.io/badge/-Code-111827?style=flat-square&logo=github&logoColor=white

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 620" role="img" aria-labelledby="title desc">
+  <title id="title">Agent-for-Infra overview</title>
+  <desc id="desc">A closed-loop map connecting an infrastructure agent with hardware, kernels, serving systems, and benchmark environments.</desc>
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f766e"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="620" rx="34" fill="#f8fafc"/>
+  <rect x="44" y="44" width="1312" height="532" rx="28" fill="#ffffff" stroke="#d8e0ea" stroke-width="2"/>
+
+  <text x="700" y="104" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="42" font-weight="800" fill="#0f172a">Agentic Loop for AI Infrastructure</text>
+  <text x="700" y="145" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#475569">specs, compilers, simulators, profilers, traces, deployments, metrics</text>
+
+  <g filter="url(#shadow)">
+    <rect x="535" y="230" width="330" height="170" rx="22" fill="#0f172a"/>
+    <text x="700" y="292" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="800" fill="#ffffff">Infrastructure Agent</text>
+    <text x="700" y="332" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#cbd5e1">plan -> execute -> observe</text>
+    <text x="700" y="362" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#cbd5e1">patch -> tune -> validate</text>
+  </g>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <rect x="116" y="216" width="286" height="92" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+    <text x="259" y="254" text-anchor="middle" font-size="22" font-weight="800" fill="#0c4a6e">Hardware</text>
+    <text x="259" y="282" text-anchor="middle" font-size="16" fill="#075985">RTL, simulation, PPA</text>
+
+    <rect x="116" y="364" width="286" height="92" rx="18" fill="#ecfdf5" stroke="#0f766e" stroke-width="2"/>
+    <text x="259" y="402" text-anchor="middle" font-size="22" font-weight="800" fill="#064e3b">Kernels &amp; Compilers</text>
+    <text x="259" y="430" text-anchor="middle" font-size="16" fill="#065f46">tests, profiles, schedules</text>
+
+    <rect x="998" y="216" width="286" height="92" rx="18" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+    <text x="1141" y="254" text-anchor="middle" font-size="22" font-weight="800" fill="#7c2d12">Serving Systems</text>
+    <text x="1141" y="282" text-anchor="middle" font-size="16" fill="#9a3412">SLOs, routing, cost</text>
+
+    <rect x="998" y="364" width="286" height="92" rx="18" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="1141" y="402" text-anchor="middle" font-size="22" font-weight="800" fill="#4c1d95">Benchmarks</text>
+    <text x="1141" y="430" text-anchor="middle" font-size="16" fill="#5b21b6">harnesses, judges, artifacts</text>
+  </g>
+
+  <path d="M 402 260 C 458 260 486 276 528 298" fill="none" stroke="#2563eb" stroke-width="5" marker-end="url(#arrow-blue)"/>
+  <path d="M 535 345 C 486 386 458 410 402 410" fill="none" stroke="#0f766e" stroke-width="5" marker-end="url(#arrow-green)"/>
+  <path d="M 865 298 C 912 276 940 260 998 260" fill="none" stroke="#2563eb" stroke-width="5" marker-end="url(#arrow-blue)"/>
+  <path d="M 998 410 C 940 410 912 386 865 345" fill="none" stroke="#0f766e" stroke-width="5" marker-end="url(#arrow-green)"/>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" fill="#334155">
+    <text x="465" y="238" text-anchor="middle">candidate artifacts</text>
+    <text x="467" y="460" text-anchor="middle">compile/run feedback</text>
+    <text x="938" y="238" text-anchor="middle">deployment actions</text>
+    <text x="936" y="460" text-anchor="middle">metrics and traces</text>
+  </g>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <rect x="318" y="505" width="764" height="42" rx="21" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="700" y="532" text-anchor="middle" font-size="18" font-weight="700" fill="#1e293b">Executable evidence closes the loop: code, configs, logs, traces, metrics, and reproducible artifacts</text>
+  </g>
+</svg>

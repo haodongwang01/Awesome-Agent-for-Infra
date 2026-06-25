@@ -42,6 +42,7 @@
       - [Benchmarks](docs/environments-benchmarks.md#benchmarks)
     - [Skills](docs/environments-benchmarks.md#skills)
     - [Toolchain](docs/environments-benchmarks.md#toolchain)
+- [🤝 Contributing](#-contributing)
 - [🌟 Acknowledgment](#-acknowledgment)
 
 ## 🧭 Survey Map
@@ -52,6 +53,11 @@
 | Operators, Kernels and Compilers | Can agents generate, repair, and optimize kernels or compiler transformations using compile errors, tests, profiler traces, and hardware feedback? | [![Open][open-badge]](docs/operators-kernels-compilers.md) |
 | Model Serving and System Optimization | Can agents tune serving engines, schedulers, deployments, and runtime configs to satisfy latency, throughput, reliability, and cost goals? | [![Open][open-badge]](docs/model-serving-system-optimization.md) |
 | Environments and Benchmarks | How should infra agents be evaluated with executable tasks, stable harnesses, reproducible metrics, and auditable baselines? | [![Open][open-badge]](docs/environments-benchmarks.md) |
+
+## 🤝 Contributing
+
+We welcome collaborators who would like to help maintain this repository and keep the survey up to date.
+If you have relevant papers, skills, toolchains, benchmarks, or reproducible agent workflows to add, please open a pull request or contact [Haodong Wang](mailto:hwanghb@connect.ust.hk), [Qianli Liu](mailto:qliucc@connect.ust.hk), or [Zicong Hong](mailto:zicong.hong@epfl.ch).
 
 ## 🌟 Acknowledgment
 

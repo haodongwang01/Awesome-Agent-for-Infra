@@ -66,14 +66,18 @@ This section is organized by the role each paper plays in the agent-for-kernels 
 
 ## Skills
 
-| Skill | What it should do |
-| --- | --- |
-| `torch-to-triton` | Translate PyTorch reference ops into Triton candidates with correctness tests. |
-| `cuda-compile-fix` | Repair CUDA/Triton compile failures with minimal semantic drift. |
-| `profile-guided-kernel-tune` | Use Nsight, ncu, torch profiler, or benchmark traces to guide changes. |
-| `numerics-guard` | Preserve dtype, tolerance, broadcasting, and edge-case contracts. |
-| `compiler-pass-agent` | Propose and validate graph rewrites or IR transformations under tests. |
-| `autotuning-budget-manager` | Allocate benchmark trials across candidate kernels, schedules, and hardware targets. |
+| Name | What it does | Code |
+|:-:|:-|:-:|
+| `AKO4ALL` | Drop-in Claude Code skill for iteratively optimizing a supplied GPU kernel with profiling, benchmarking, and rewrite loops. | [![Code][code-badge]](https://github.com/TongmingLAIC/AKO4ALL) |
+| `AKO4X` | Closed-loop, campaign-based agent framework for optimizing GPU kernels with swappable benchmarks, per-DSL skills, and optional harness co-evolution. | [![Code][code-badge]](https://github.com/TongmingLAIC/AKO4X) |
+| `Kernel Design Agents` | Agent-centric workflow for researching, implementing, verifying, and iterating on performance-sensitive CUDA kernel tasks. | [![Code][code-badge]](https://github.com/mit-han-lab/kernel-design-agents) |
+| `ncu-report-skill` | Claude Code skill for building Nsight Compute profiling harnesses, parsing NCU reports, and producing evidence-backed CUDA optimization guidance. | [![Code][code-badge]](https://github.com/mit-han-lab/ncu-report-skill) |
+| `KernelWiki` | Claude Code skill and structured knowledge base for Blackwell and Hopper GPU kernel optimization patterns. | [![Code][code-badge]](https://github.com/mit-han-lab/KernelWiki) |
+| `AutoKernel` | Autonomous loop that profiles PyTorch models, extracts bottleneck kernels, and optimizes Triton or CUDA C++ replacements with fixed correctness and performance checks. | [![Code][code-badge]](https://github.com/RightNow-AI/autokernel) |
+| `AutoMegaKernel` | Agent harness for compiling a model into a verified, self-retargeting CUDA megakernel and self-tuning it for batch-1 LLM decode. | [![Code][code-badge]](https://github.com/RightNow-AI/AutoMegaKernel) |
+| `KernelGYM` | Distributed GPU environment for RL training, trajectory collection, and scalable evaluation of kernel generation agents. | [![Code][code-badge]](https://github.com/hkust-nlp/KernelGYM) |
+| `CudaForge` | Training-free multi-agent workflow for CUDA kernel generation and optimization using correctness tests and hardware feedback such as Nsight Compute metrics. | [![Code][code-badge]](https://github.com/OptimAI-Lab/CudaForge) |
+| `KernelMem` | KernelSkill implementation with memory-aware generation, repair, benchmarking, and NCU/NSYS profiling-driven optimization prompts. | [![Code][code-badge]](https://github.com/0satan0/KernelMem) |
 
 ## Toolchain
 

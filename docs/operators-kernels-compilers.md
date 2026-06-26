@@ -22,47 +22,47 @@ This section is organized by the role each paper plays in the agent-for-kernels 
 
 ### Benchmarks and Evaluation
 
-| Date | Name | Title | Paper / Docs | Code |
-|:-:|:-:|:-|:-:|:-:|
-| 2026 May | `FastKernels` | Benchmarking GPU kernel generation in production serving workloads | [![Paper][paper-badge]](https://arxiv.org/abs/2605.23215) | [![Code][code-badge]](https://github.com/Snowflake-AI-Research/fastkernels) |
-| 2026 May | `KernelBenchX` | Comprehensive category-aware benchmark for evaluating LLM-generated GPU kernels | [![Paper][paper-badge]](https://arxiv.org/abs/2605.04956) | [![Code][code-badge]](https://github.com/BonnieW05/KernelBenchX) |
-| 2025 Jul | `GEAK` | Triton kernel AI agent and evaluation benchmarks for optimized GPU kernels | [![Paper][paper-badge]](https://arxiv.org/abs/2507.23194) | - |
-| 2025 Feb | `KernelBench` | Benchmark for testing whether LLMs can write correct and faster GPU kernels | [![Paper][paper-badge]](https://arxiv.org/abs/2502.10517) | [![Code][code-badge]](https://github.com/ZichenZhu/KernelBench_Research) |
+| Date | Venue | Name | Title | Paper / Docs | Code |
+|:-:|:-:|:-:|:-|:-:|:-:|
+| 2026 May | ArXiv | `FastKernels` | Benchmarking GPU kernel generation in production serving workloads | [![Paper][paper-badge]](https://arxiv.org/abs/2605.23215) | [![Code][code-badge]](https://github.com/Snowflake-AI-Research/fastkernels) |
+| 2026 May | ArXiv | `KernelBenchX` | Comprehensive category-aware benchmark for evaluating LLM-generated GPU kernels | [![Paper][paper-badge]](https://arxiv.org/abs/2605.04956) | [![Code][code-badge]](https://github.com/BonnieW05/KernelBenchX) |
+| 2025 Jul | ArXiv | `GEAK` | Triton kernel AI agent and evaluation benchmarks for optimized GPU kernels | [![Paper][paper-badge]](https://arxiv.org/abs/2507.23194) | - |
+| 2025 Feb | ArXiv | `KernelBench` | Benchmark for testing whether LLMs can write correct and faster GPU kernels | [![Paper][paper-badge]](https://arxiv.org/abs/2502.10517) | [![Code][code-badge]](https://github.com/ZichenZhu/KernelBench_Research) |
 
 ### Trained Kernel-Generation Agents
 
-| Date | Name | Title | Paper / Docs | Code |
-|:-:|:-:|:-|:-:|:-:|
-| 2026 Jun | `daVinci-kernel` | Co-evolving skill selection, summarization, and utilization via RL for GPU kernel optimization | [![Paper][paper-badge]](https://arxiv.org/abs/2606.16497) | - |
-| 2026 Jun | `MusaCoder` | Native GPU kernel generation with full-stack training on Moore Threads GPU | [![Paper][paper-badge]](https://arxiv.org/abs/2606.04847) | - |
-| 2026 Mar | `DRTriton` | Large-scale synthetic data-driven reinforcement learning for Triton kernel generation | [![Paper][paper-badge]](https://arxiv.org/abs/2603.21465) | - |
-| 2026 Feb | `Fine-Tuning GPT-5` | Fine-tuning GPT-5 for GPU kernel generation in Makora's training environment | [![Paper][paper-badge]](https://arxiv.org/abs/2602.11000) | - |
-| 2026 Feb | `Dr. Kernel` | Reinforcement learning done right for Triton kernel generations | [![Paper][paper-badge]](https://arxiv.org/abs/2602.05885) | [![Code][code-badge]](https://github.com/hkust-nlp/KernelGYM) |
-| 2025 Oct | `TritonRL` | Training LLMs to think and code Triton without cheating | [![Paper][paper-badge]](https://arxiv.org/abs/2510.17891) | - |
-| 2025 Oct | `ConCuR` | Conciseness-oriented training data and KernelCoder for state-of-the-art kernel generation | [![Paper][paper-badge]](https://arxiv.org/abs/2510.07356) | - |
-| 2025 Jul | `CUDA-L1` | Improving CUDA optimization via contrastive reinforcement learning | [![Paper][paper-badge]](https://arxiv.org/abs/2507.14111) [![Docs][docs-badge]](https://deepreinforce-ai.github.io/cudal1_blog) | - |
+| Date | Venue | Name | Title | Paper / Docs | Code |
+|:-:|:-:|:-:|:-|:-:|:-:|
+| 2026 Jun | ArXiv | `daVinci-kernel` | Co-evolving skill selection, summarization, and utilization via RL for GPU kernel optimization | [![Paper][paper-badge]](https://arxiv.org/abs/2606.16497) | - |
+| 2026 Jun | ArXiv | `MusaCoder` | Native GPU kernel generation with full-stack training on Moore Threads GPU | [![Paper][paper-badge]](https://arxiv.org/abs/2606.04847) | - |
+| 2026 Mar | ArXiv | `DRTriton` | Large-scale synthetic data-driven reinforcement learning for Triton kernel generation | [![Paper][paper-badge]](https://arxiv.org/abs/2603.21465) | - |
+| 2026 Feb | ArXiv | `Fine-Tuning GPT-5` | Fine-tuning GPT-5 for GPU kernel generation in Makora's training environment | [![Paper][paper-badge]](https://arxiv.org/abs/2602.11000) | - |
+| 2026 Feb | ICML 2026 | `Dr. Kernel` | Reinforcement learning done right for Triton kernel generations | [![Paper][paper-badge]](https://arxiv.org/abs/2602.05885) | [![Code][code-badge]](https://github.com/hkust-nlp/KernelGYM) |
+| 2025 Oct | ArXiv | `TritonRL` | Training LLMs to think and code Triton without cheating | [![Paper][paper-badge]](https://arxiv.org/abs/2510.17891) | - |
+| 2025 Oct | ArXiv | `ConCuR` | Conciseness-oriented training data and KernelCoder for state-of-the-art kernel generation | [![Paper][paper-badge]](https://arxiv.org/abs/2510.07356) | - |
+| 2025 Jul | ICLR 2026 | `CUDA-L1` | Improving CUDA optimization via contrastive reinforcement learning | [![Paper][paper-badge]](https://arxiv.org/abs/2507.14111) [![Docs][docs-badge]](https://deepreinforce-ai.github.io/cudal1_blog) | - |
 
 ### Agentic Kernel Optimization Frameworks
 
-| Date | Name | Title | Paper / Docs | Code |
-|:-:|:-:|:-|:-:|:-:|
-| 2026 Jun | `KForge` | LLM-driven cross-platform kernel generation for AI accelerators | [![Paper][paper-badge]](https://arxiv.org/abs/2606.02963) | - |
-| 2026 Mar | `StitchCUDA` | Automated multi-agent end-to-end GPU programming with rubric-based agentic reinforcement learning | [![Paper][paper-badge]](https://arxiv.org/abs/2603.02637) | - |
-| 2026 Mar | `KernelFoundry` | Hardware-aware evolutionary GPU kernel optimization with distributed benchmarking | [![Paper][paper-badge]](https://arxiv.org/abs/2603.12440) | - |
-| 2026 Mar | `KernelSkill` | Multi-agent GPU kernel optimization with reusable expert skills and trajectory memory | [![Paper][paper-badge]](https://arxiv.org/abs/2603.10085) | [![Code][code-badge]](https://github.com/0satan0/KernelMem) |
-| 2026 Jan | `Two-Stage GPU Kernel Tuner` | Semantic refactoring plus search-based optimization for GPU kernel tuning | [![Paper][paper-badge]](https://arxiv.org/abs/2601.12698) | - |
-| 2025 Dec | `KernelEvolve` | Scaling agentic kernel coding for heterogeneous AI accelerators at Meta | [![Paper][paper-badge]](https://arxiv.org/abs/2512.23236) | - |
-| 2025 Dec | `cuPilot` | Strategy-coordinated multi-agent framework for CUDA kernel evolution | [![Paper][paper-badge]](https://arxiv.org/abs/2512.16465) | [![Code][code-badge]](https://github.com/champloo2878/cuPilot-Kernels) |
-| 2025 Nov | `CudaForge` | Agent framework with hardware feedback for CUDA kernel optimization | [![Paper][paper-badge]](https://arxiv.org/abs/2511.01884) | [![Code][code-badge]](https://github.com/OptimAI-Lab/CudaForge) |
-| 2025 Oct | `STARK` | Strategic team of agents for refining kernels with profiling feedback | [![Paper][paper-badge]](https://arxiv.org/abs/2510.16996) | - |
+| Date | Venue | Name | Title | Paper / Docs | Code |
+|:-:|:-:|:-:|:-|:-:|:-:|
+| 2026 Jun | MLArchSys @ ISCA 2026 | `KForge` | LLM-driven cross-platform kernel generation for AI accelerators | [![Paper][paper-badge]](https://arxiv.org/abs/2606.02963) | - |
+| 2026 Mar | ArXiv | `StitchCUDA` | Automated multi-agent end-to-end GPU programming with rubric-based agentic reinforcement learning | [![Paper][paper-badge]](https://arxiv.org/abs/2603.02637) | - |
+| 2026 Mar | ArXiv | `KernelFoundry` | Hardware-aware evolutionary GPU kernel optimization with distributed benchmarking | [![Paper][paper-badge]](https://arxiv.org/abs/2603.12440) | - |
+| 2026 Mar | ArXiv | `KernelSkill` | Multi-agent GPU kernel optimization with reusable expert skills and trajectory memory | [![Paper][paper-badge]](https://arxiv.org/abs/2603.10085) | [![Code][code-badge]](https://github.com/0satan0/KernelMem) |
+| 2026 Jan | ArXiv | `Two-Stage GPU Kernel Tuner` | Semantic refactoring plus search-based optimization for GPU kernel tuning | [![Paper][paper-badge]](https://arxiv.org/abs/2601.12698) | - |
+| 2025 Dec | ArXiv | `KernelEvolve` | Scaling agentic kernel coding for heterogeneous AI accelerators at Meta | [![Paper][paper-badge]](https://arxiv.org/abs/2512.23236) | - |
+| 2025 Dec | ArXiv | `cuPilot` | Strategy-coordinated multi-agent framework for CUDA kernel evolution | [![Paper][paper-badge]](https://arxiv.org/abs/2512.16465) | [![Code][code-badge]](https://github.com/champloo2878/cuPilot-Kernels) |
+| 2025 Nov | ArXiv | `CudaForge` | Agent framework with hardware feedback for CUDA kernel optimization | [![Paper][paper-badge]](https://arxiv.org/abs/2511.01884) | [![Code][code-badge]](https://github.com/OptimAI-Lab/CudaForge) |
+| 2025 Oct | ArXiv | `STARK` | Strategic team of agents for refining kernels with profiling feedback | [![Paper][paper-badge]](https://arxiv.org/abs/2510.16996) | - |
 
 ### LLM-Agent Algorithm-Discovery Precedents
 
-| Date | Name | Title | Paper / Docs | Code |
-|:-:|:-:|:-|:-:|:-:|
-| 2025 Jun | `AlphaEvolve` | Coding agent for scientific and algorithmic discovery | [![Paper][paper-badge]](https://arxiv.org/abs/2506.13131) | - |
-| 2024 Jan | `Evolution of Heuristics` | Automatic algorithm design with large language models | [![Paper][paper-badge]](https://arxiv.org/abs/2401.02051) | [![Code][code-badge]](https://github.com/FeiLiu36/EoH) |
-| 2023 Dec | `FunSearch` | Mathematical discoveries from program search with large language models | [![Paper][paper-badge]](https://www.nature.com/articles/s41586-023-06924-6) | [![Code][code-badge]](https://github.com/google-deepmind/funsearch) |
+| Date | Venue | Name | Title | Paper / Docs | Code |
+|:-:|:-:|:-:|:-|:-:|:-:|
+| 2025 Jun | ArXiv | `AlphaEvolve` | Coding agent for scientific and algorithmic discovery | [![Paper][paper-badge]](https://arxiv.org/abs/2506.13131) | - |
+| 2024 Jan | ArXiv | `Evolution of Heuristics` | Automatic algorithm design with large language models | [![Paper][paper-badge]](https://arxiv.org/abs/2401.02051) | [![Code][code-badge]](https://github.com/FeiLiu36/EoH) |
+| 2023 Dec | Nature 2023 | `FunSearch` | Mathematical discoveries from program search with large language models | [![Paper][paper-badge]](https://www.nature.com/articles/s41586-023-06924-6) | [![Code][code-badge]](https://github.com/google-deepmind/funsearch) |
 
 ## Skills
 

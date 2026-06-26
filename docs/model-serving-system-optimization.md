@@ -8,11 +8,7 @@ Can agents tune the live system around a model so that serving quality, latency,
 
 This track covers serving engines, schedulers, batching, KV-cache management, quantization, routing, autoscaling, deployment topology, observability, and production load testing.
 
-## Agent Loop
 
-```text
-Workload / SLO -> serving config -> deploy / run -> load test -> inspect traces -> tune -> validate
-```
 
 ## Key Questions
 
@@ -25,15 +21,15 @@ Workload / SLO -> serving config -> deploy / run -> load test -> inspect traces 
 
 ### Serving Systems and Papers
 
-| Date | Name | Title | Paper / Docs | Code |
-|:-:|:-:|:-|:-:|:-:|
-| 2024 Mar | `Sarathi-Serve` | Chunked prefill and stall-free scheduling for throughput-latency tradeoffs | [![Paper][paper-badge]](https://arxiv.org/abs/2403.02310) | [![Code][code-badge]](https://github.com/microsoft/sarathi-serve) |
-| 2023 Dec | `SGLang` | Structured language model programs with runtime optimizations such as KV-cache reuse | [![Paper][paper-badge]](https://arxiv.org/abs/2312.07104) | [![Code][code-badge]](https://github.com/sgl-project/sglang) |
-| 2023 Oct | `TensorRT-LLM` | NVIDIA inference stack for optimized LLM deployment | [![Blog][blog-badge]](https://developer.nvidia.com/blog/optimizing-inference-on-llms-with-tensorrt-llm-now-publicly-available/) [![Docs][docs-badge]](https://nvidia.github.io/TensorRT-LLM/) | [![Code][code-badge]](https://github.com/NVIDIA/TensorRT-LLM) |
-| 2023 Sep | `vLLM` | High-throughput LLM serving with KV-cache paging and continuous batching | [![Paper][paper-badge]](https://arxiv.org/abs/2309.06180) | [![Code][code-badge]](https://github.com/vllm-project/vllm) |
-| 2020 Jul | `KServe` | Kubernetes-native model serving and inference platform | [![Paper][paper-badge]](https://arxiv.org/abs/2007.07366) [![Docs][docs-badge]](https://kserve.github.io/website/) | [![Code][code-badge]](https://github.com/kserve/kserve) |
-| - | `TGI` | Hugging Face serving stack for text generation workloads | [![Docs][docs-badge]](https://huggingface.co/docs/text-generation-inference) | [![Code][code-badge]](https://github.com/huggingface/text-generation-inference) |
-| - | `llama.cpp` | Portable inference runtime with CPU, quantization, and edge-deployment relevance | - | [![Code][code-badge]](https://github.com/ggml-org/llama.cpp) |
+| Date | Venue | Name | Title | Paper / Docs | Code |
+|:-:|:-:|:-:|:-|:-:|:-:|
+| 2024 Mar | ArXiv | `Sarathi-Serve` | Chunked prefill and stall-free scheduling for throughput-latency tradeoffs | [![Paper][paper-badge]](https://arxiv.org/abs/2403.02310) | [![Code][code-badge]](https://github.com/microsoft/sarathi-serve) |
+| 2023 Dec | ArXiv | `SGLang` | Structured language model programs with runtime optimizations such as KV-cache reuse | [![Paper][paper-badge]](https://arxiv.org/abs/2312.07104) | [![Code][code-badge]](https://github.com/sgl-project/sglang) |
+| 2023 Oct | NVIDIA Blog/Docs | `TensorRT-LLM` | NVIDIA inference stack for optimized LLM deployment | [![Blog][blog-badge]](https://developer.nvidia.com/blog/optimizing-inference-on-llms-with-tensorrt-llm-now-publicly-available/) [![Docs][docs-badge]](https://nvidia.github.io/TensorRT-LLM/) | [![Code][code-badge]](https://github.com/NVIDIA/TensorRT-LLM) |
+| 2023 Sep | SOSP 2023 | `vLLM` | High-throughput LLM serving with KV-cache paging and continuous batching | [![Paper][paper-badge]](https://arxiv.org/abs/2309.06180) | [![Code][code-badge]](https://github.com/vllm-project/vllm) |
+| 2020 Jul | ICML Workshop 2020 | `KServe` | Kubernetes-native model serving and inference platform | [![Paper][paper-badge]](https://arxiv.org/abs/2007.07366) [![Docs][docs-badge]](https://kserve.github.io/website/) | [![Code][code-badge]](https://github.com/kserve/kserve) |
+| - | Docs | `TGI` | Hugging Face serving stack for text generation workloads | [![Docs][docs-badge]](https://huggingface.co/docs/text-generation-inference) | [![Code][code-badge]](https://github.com/huggingface/text-generation-inference) |
+| - | - | `llama.cpp` | Portable inference runtime with CPU, quantization, and edge-deployment relevance | - | [![Code][code-badge]](https://github.com/ggml-org/llama.cpp) |
 
 ## Skills
 
